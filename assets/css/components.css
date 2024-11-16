@@ -1,0 +1,80 @@
+/* Sheet/Dialog Component */
+.sheet {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    transition: right 0.3s ease-in-out;
+    z-index: 50;
+    border-left: 1px solid rgba(0, 229, 176, 0.1);
+}
+
+.sheet.open {
+    right: 0;
+}
+
+/* Button Component */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: white;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Search Input Component */
+.search-input {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 229, 176, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    width: 200px;
+    transition: all 0.2s;
+}
+
+.search-input:focus {
+    border-color: #00E5B0;
+    outline: none;
+}
+
+/* Dropdown Component */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 229, 176, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: all 0.2s;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+} 

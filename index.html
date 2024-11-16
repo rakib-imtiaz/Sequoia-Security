@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequoia Security</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <!-- Add Leaflet CSS in head -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+</head>
+<body class="bg-white">
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <main class="pt-16">
+        <!-- Main Content Sections -->
+        <section class="relative min-h-screen bg-gradient-to-br from-sequoia-dark-green via-sequoia-green to-black overflow-hidden">
+            <!-- Background Overlay Pattern -->
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            
+            <!-- Content Container -->
+            <div class="container mx-auto px-4 relative z-10 min-h-screen flex items-center">
+                <div class="max-w-3xl">
+                    <!-- Animated Title -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in">
+                        Security Services That 
+                        <span class="block mt-2">Make The World A</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-sequoia-green">
+                            Safer & Friendlier Place
+                        </span>
+                    </h1>
+                    
+                    <!-- Description -->
+                    <p class="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl animate-fade-in-delay">
+                        We are dedicated to our clients with a beyond-expectations approach to security. 
+                        Discover our range of security services, expertly tailored to your unique needs.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-2">
+                        <a href="#contact" 
+                           class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-sequoia-green hover:bg-sequoia-dark-green rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            Contact Us
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </a>
+                        <a href="#services" 
+                           class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white border-2 border-white hover:bg-white hover:text-sequoia-green rounded-lg transition-all duration-300">
+                            Our Services
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
+        </section>
+
+        <!-- The Sequoia Difference -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-4xl font-bold text-center mb-12">
+                    The Sequoia Difference
+                </h2>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-gray-600 text-lg">
+                        We combine cutting-edge technology with exceptional human expertise, delivering superior security solutions that exceed expectations. Our commitment to excellence makes us the ultimate choice for those seeking reliable and innovative security services.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Services Grid -->
+        <section id="services" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-sequoia-dark-green via-sequoia-green to-sequoia-dark-green bg-clip-text text-transparent">
+                        Leading Canada's Security Services
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Empowering businesses with comprehensive security solutions that combine cutting-edge technology with exceptional human expertise.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Security Guards Card -->
+                    <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
+                        <img src="assets/images/security-guards.jpg" alt="Security Guards" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
+                            <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                Security Guards
+                            </h3>
+                            <p class="text-white/90 mb-6 transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                Professional security personnel trained to protect your assets and ensure safety with the highest standards of service.
+                            </p>
+                            <a href="/services/security-guards" 
+                               class="inline-flex items-center text-sequoia-green hover:text-white transform translate-y-24 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                                <span class="font-medium">Learn More</span>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" 
+                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Patrol Card -->
+                    <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
+                        <img src="assets/images/mobile-patrol.jpg" alt="Mobile Patrol" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
+                            <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                Mobile Patrol & Emergency Response
+                            </h3>
+                            <p class="text-white/90 mb-6 transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                24/7 mobile security patrols and rapid emergency response services to protect your property.
+                            </p>
+                            <a href="/services/mobile-patrol" 
+                               class="inline-flex items-center text-sequoia-green hover:text-white transform translate-y-24 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                                <span class="font-medium">Learn More</span>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" 
+                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Loss Prevention Card -->
+                    <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
+                        <img src="assets/images/loss-prevention.jpg" alt="Loss Prevention" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
+                            <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                Loss Prevention
+                            </h3>
+                            <p class="text-white/90 mb-6 transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                Comprehensive loss prevention strategies to protect your retail assets and reduce shrinkage.
+                            </p>
+                            <a href="/services/loss-prevention" 
+                               class="inline-flex items-center text-sequoia-green hover:text-white transform translate-y-24 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                                <span class="font-medium">Learn More</span>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" 
+                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Special Events Card -->
+                    <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
+                        <img src="assets/images/special-events.jpg" alt="Special Events" 
+                             class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
+                            <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
+                                Special Events & Ad-Hoc Security
+                            </h3>
+                            <p class="text-white/90 mb-6 transform translate-y-16 group-hover:translate-y-0 transition-transform duration-500 delay-100">
+                                Specialized security solutions for events, concerts, and temporary security needs.
+                            </p>
+                            <a href="/services/special-events" 
+                               class="inline-flex items-center text-sequoia-green hover:text-white transform translate-y-24 group-hover:translate-y-0 transition-all duration-500 delay-200">
+                                <span class="font-medium">Learn More</span>
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" 
+                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovative Security Programs -->
+        <section class="py-24 bg-[#0A1F44] relative overflow-hidden">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0A1F44] via-[#0A1F44]/95 to-black"></div>
+                <div class="absolute inset-0 bg-[url('/assets/images/pattern-grid.svg')] opacity-5"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white">
+                        Innovative Security Programs
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        As the largest full-service security company in the country, we provide specialized security services across a wide range of sectors to cater to unique security and safety needs.
+                    </p>
+                </div>
+
+                <!-- Industries Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Healthcare Security -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-hospital text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Healthcare Security Services</h3>
+                            <p class="text-gray-400 text-sm">Specialized security for healthcare facilities</p>
+                            <a href="/industries/healthcare" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Retail & Shopping Mall -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-store text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Retail & Shopping Mall Security</h3>
+                            <p class="text-gray-400 text-sm">Comprehensive retail security solutions</p>
+                            <a href="/industries/retail" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- College Campus Security -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-graduation-cap text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">College Campus Security Services</h3>
+                            <p class="text-gray-400 text-sm">Ensuring safety in educational environments</p>
+                            <a href="/industries/campus" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Office Security -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-building text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Office Security Service</h3>
+                            <p class="text-gray-400 text-sm">Professional workplace security solutions</p>
+                            <a href="/industries/office" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Industrial Security -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-industry text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Industrial Security Services</h3>
+                            <p class="text-gray-400 text-sm">Protecting industrial facilities and assets</p>
+                            <a href="/industries/industrial" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Critical Infrastructure -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-landmark text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Critical Infrastructure Security</h3>
+                            <p class="text-gray-400 text-sm">Securing vital infrastructure facilities</p>
+                            <a href="/industries/critical-infrastructure" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Aviation Security -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-plane text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Aviation Security Services</h3>
+                            <p class="text-gray-400 text-sm">Specialized aviation facility security</p>
+                            <a href="/industries/aviation" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Warehouse & Distribution -->
+                    <div class="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-xl bg-sequoia-green/10 group-hover:bg-sequoia-green/20 transition-all duration-300">
+                                <i class="fas fa-warehouse text-3xl text-sequoia-green"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Warehouse & Distribution Security</h3>
+                            <p class="text-gray-400 text-sm">Logistics and distribution center protection</p>
+                            <a href="/industries/warehouse" class="mt-4 inline-flex items-center text-sequoia-green hover:text-white transition-colors duration-300">
+                                Learn More
+                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center mt-16">
+                    <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-sequoia-green hover:bg-sequoia-dark-green rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Contact Us For A Quote
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Service Locations -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <!-- Header -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-[#0A1F44]">
+                        Security Service Locations
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8">
+                        Find our security services in your area
+                    </p>
+                </div>
+
+                <!-- Map Container with Fixed Layout -->
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 relative rounded-2xl overflow-hidden shadow-2xl">
+                    <!-- Location List - Takes 1 column on mobile, 1 column out of 4 on desktop -->
+                    <div class="lg:col-span-1 bg-white p-6 rounded-lg shadow-lg">
+                        <div class="space-y-4">
+                            <div class="location-card p-4 bg-gray-50 rounded-lg">
+                                <h3 class="font-semibold text-[#0A1F44]">Sequoia Security Kamloops</h3>
+                                <p class="text-sm text-gray-600">293 Arrowstone Drive</p>
+                                <p class="text-sm text-gray-600">Kamloops, BC V2C1P8</p>
+                                <p class="text-sm text-gray-600">Contact: RH Mahamud</p>
+                                <div class="mt-2 flex items-center text-sequoia-green text-sm">
+                                    <i class="fas fa-phone-alt mr-2"></i>
+                                    <span>1-877-358-0441</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map - Takes 1 column on mobile, 3 columns out of 4 on desktop -->
+                    <div class="lg:col-span-3 h-[500px] rounded-lg overflow-hidden">
+                        <div id="map" class="w-full h-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog/Tips Section -->
+        <section class="py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-[#0A1F44]">
+                    Security Tips & Career Support
+                </h2>
+
+                <!-- Blog Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 - Mentorship -->
+                    <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
+                            <img src="assets/images/mentorship.jpg" alt="Mentorship" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 z-20">
+                                <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
+                                    Careers in Security
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0A1F44] mb-3">
+                                EP 36: The Power of Mentorship and Education
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                Did you catch our latest episode of The Difference Makers podcast? We had the honour of speaking with Yvette Lacosse...
+                            </p>
+                            <a href="/blog/mentorship-education" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 - Nick Khoja -->
+                    <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
+                            <img src="assets/images/care-culture.jpg" alt="Care Culture" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 z-20">
+                                <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
+                                    Care Culture
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0A1F44] mb-3">
+                                Then & Now: Nick Khoja
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                At Paladin, we're all about helping our team members grow and reach their full potential. The first value of Paladin's C.A.R.E culture is to...
+                            </p>
+                            <a href="/blog/nick-khoja" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 - Future of Security -->
+                    <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="relative h-64 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
+                            <img src="assets/images/future-security.jpg" alt="Future of Security" class="w-full h-full object-cover">
+                            <div class="absolute bottom-4 left-4 z-20">
+                                <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
+                                    Careers in Security
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0A1F44] mb-3">
+                                The Future of Security Guarding
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                James Blight, CPP, Director for Paladin Security, takes a look at industry trends and how they could impact the guarding...
+                            </p>
+                            <a href="/blog/future-security" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                                Read More
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Function to load HTML components
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+                
+                // If this is the header, initialize the mobile menu after loading
+                if (containerId === 'header-container') {
+                    initializeMobileMenu();
+                }
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        // Function to initialize mobile menu
+        function initializeMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const dropdowns = document.querySelectorAll('.mobile-dropdown button');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Toggle menu icon
+                    const menuOpen = mobileMenuButton.querySelector('.menu-open');
+                    const menuClose = mobileMenuButton.querySelector('.menu-close');
+                    menuOpen.classList.toggle('hidden');
+                    menuClose.classList.toggle('hidden');
+                });
+            }
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', (e) => {
+                    const content = e.target.nextElementSibling;
+                    if (content) {
+                        content.classList.toggle('hidden');
+                    }
+                });
+            });
+        }
+
+        // Load components when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            loadComponent('header.html', 'header-container');
+            loadComponent('footer.html', 'footer-container');
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize map centered on Kamloops
+            const map = L.map('map').setView([50.6745, -120.3273], 14);
+
+            // Add custom tile layer
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Custom marker icon
+            const customIcon = L.icon({
+                iconUrl: '/assets/images/marker.svg', // Path to your marker image
+                iconSize: [40, 40],
+                iconAnchor: [20, 40],
+                popupAnchor: [0, -40]
+            });
+
+            // Add marker
+            const marker = L.marker([50.6745, -120.3273], { icon: customIcon }).addTo(map);
+
+            // Add popup
+            marker.bindPopup(`
+                <div class="p-4">
+                    <h3 class="font-semibold text-[#0A1F44] mb-2">Sequoia Security Kamloops</h3>
+                    <p class="text-sm text-gray-600">293 Arrowstone Drive</p>
+                    <p class="text-sm text-gray-600">Kamloops, BC V2C1P8</p>
+                    <p class="text-sm text-sequoia-green mt-2">1-877-358-0441</p>
+                </div>
+            `);
+        });
+    </script>
+
+    <style>
+        /* Map container styles */
+        #map {
+            z-index: 1;
+        }
+
+        /* Popup styles */
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .leaflet-popup-content {
+            margin: 0;
+            min-width: 200px;
+        }
+
+        .leaflet-container a.leaflet-popup-close-button {
+            color: #666;
+            padding: 8px;
+        }
+    </style>
+    <!-- Add Leaflet JS before your closing body tag -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+</body>
+</html> 

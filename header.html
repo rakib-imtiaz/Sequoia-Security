@@ -1,0 +1,416 @@
+<header class="fixed w-full top-0 z-50 transform transition-all duration-300" id="main-header">
+    <!-- Top Bar -->
+    <div class="bg-[#0A1F44] border-b border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-end items-center h-10">
+                <!-- Utility Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <button class="text-white/90 hover:text-white flex items-center group transition-all">
+                        <i class="fas fa-search mr-2 group-hover:rotate-90 transition-transform duration-300"></i>
+                        <span class="text-sm font-medium tracking-wider">SEARCH</span>
+                    </button>
+                    <a href="/careers" class="text-white/90 hover:text-white flex items-center group">
+                        <i class="fas fa-briefcase mr-2 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-sm font-medium tracking-wider">CAREERS</span>
+                    </a>
+                    <a href="/login" class="text-white/90 hover:text-white flex items-center group">
+                        <i class="fas fa-user mr-2 group-hover:scale-110 transition-transform duration-300"></i>
+                        <span class="text-sm font-medium tracking-wider">EMPLOYEE LOGIN</span>
+                    </a>
+                    <!-- Language/Region Selector -->
+                    <div class="flex items-center space-x-3 pl-6 border-l border-white/20">
+                        <i class="fas fa-flag-usa text-white/90 hover:text-white hover:scale-110 transition-all cursor-pointer"></i>
+                        <i class="fas fa-flag text-white/90 hover:text-white hover:scale-110 transition-all cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-[#0A1F44]/95 backdrop-blur-md shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="/" class="block w-48 transform hover:scale-105 transition-transform duration-300">
+                    <img src="assets/images/logo_white.png" alt="Sequoia Security" class="w-full">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <!-- Security Services Dropdown -->
+                    <div class="group relative">
+                        <button class="text-white/90 group-hover:text-white py-8 flex items-center space-x-2 transition-all duration-300">
+                            <span class="font-medium tracking-wider">SECURITY SERVICES</span>
+                            <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <!-- Updated Dropdown Menu -->
+                        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 w-80 
+                                  bg-white/95 backdrop-blur-md shadow-xl rounded-b-lg transform -translate-y-3 
+                                  group-hover:translate-y-0 transition-all duration-300 custom-scrollbar">
+                            <div class="py-2 grid grid-cols-1 gap-1 max-h-[calc(100vh-200px)] overflow-y-auto custom-scrollbar">
+                                <a href="/services/guard-services" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-shield-alt w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Guard Services</span>
+                                </a>
+                                <a href="/services/mobile-patrol" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-car w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Mobile Patrol</span>
+                                </a>
+                                <a href="/services/loss-prevention" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-lock w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Loss Prevention</span>
+                                </a>
+                                <a href="/services/event-security" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-calendar-alt w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Event Security Services</span>
+                                </a>
+                                <a href="/services/operations-centres" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-building w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Operations Centres</span>
+                                </a>
+                                <a href="/services/investigations-risk-management" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-search w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Investigations & Risk Management</span>
+                                </a>
+                                <a href="/services/parking-management" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-parking w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Parking Management</span>
+                                </a>
+                                <!-- <a href="/services/integrated-security-systems" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-cogs w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Integrated Security Systems</span>
+                                </a>
+                                <a href="/services/alarm-systems" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-bell w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Alarm Systems</span>
+                                </a> -->
+                                <a href="/services/access-control" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-key w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Access Control</span>
+                                </a>
+                                <a href="/services/video-services" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-video w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Video Services</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Nav Items -->
+                    <div class="group relative">
+                        <button class="text-white/90 group-hover:text-white py-8 flex items-center space-x-2 transition-all duration-300">
+                            <span class="font-medium tracking-wider">INDUSTRIES</span>
+                            <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 w-80 
+                                  bg-white/95 backdrop-blur-md shadow-xl rounded-b-lg transform -translate-y-3 
+                                  group-hover:translate-y-0 transition-all duration-300 custom-scrollbar">
+                            <div class="py-2 grid grid-cols-1 gap-1 max-h-[calc(100vh-200px)] overflow-y-auto custom-scrollbar">
+                                <a href="/industries/healthcare" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-hospital w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Healthcare</span>
+                                </a>
+                                <a href="/industries/office-commercial" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-building w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Office & Commercial</span>
+                                </a>
+                                <a href="/industries/retail-shopping-malls" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-shopping-cart w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Retail & Shopping Malls</span>
+                                </a>
+                                <a href="/industries/post-secondary" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-graduation-cap w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Post Secondary</span>
+                                </a>
+                                <a href="/industries/aviation" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-plane w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Aviation</span>
+                                </a>
+                                <a href="/industries/industrial-security" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-industry w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Industrial Security</span>
+                                </a>
+                                <a href="/industries/government-infrastructure" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-landmark w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Government & Infrastructure</span>
+                                </a>
+                                <a href="/industries/warehouse-distribution" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-warehouse w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Warehouse & Distribution</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/locations" class="text-white/90 hover:text-white py-8 font-medium tracking-wider transition-all duration-300">
+                        LOCATIONS
+                    </a>
+                    <div class="group relative">
+                        <button class="text-white/90 group-hover:text-white py-8 flex items-center space-x-2 transition-all duration-300">
+                            <span class="font-medium tracking-wider">ABOUT US</span>
+                            <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-300" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 w-60 
+                                  bg-white/95 backdrop-blur-md shadow-xl rounded-b-lg transform -translate-y-3 
+                                  group-hover:translate-y-0 transition-all duration-300 custom-scrollbar">
+                            <div class="py-2 grid grid-cols-1 gap-1">
+                                <a href="/about-us/our-story" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-book-open w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Our Story</span>
+                                </a>
+                                <a href="/about-us/leadership" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-users w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Leadership</span>
+                                </a>
+                                <a href="/about-us/community-involvement" class="flex items-center px-6 py-3 text-gray-700 hover:bg-sequoia-green hover:text-white transition-all duration-200 group">
+                                    <i class="fas fa-hands-helping w-6 mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                                    <span>Community Involvement</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/blog" class="text-white/90 hover:text-white py-8 font-medium tracking-wider transition-all duration-300">
+                        BLOG
+                    </a>
+                    <a href="/podcast" class="text-white/90 hover:text-white py-8 font-medium tracking-wider transition-all duration-300">
+                        PODCAST
+                    </a>
+                    <a href="/resources" class="text-white/90 hover:text-white py-8 font-medium tracking-wider transition-all duration-300">
+                        RESOURCES
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white p-2 focus:outline-none" id="mobile-menu-button">
+                    <div class="w-6 h-6 relative flex flex-col justify-center items-center">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Mobile Menu (Updated) -->
+            <div class="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm transform transition-all duration-300 ease-in-out opacity-0 pointer-events-none"
+                 id="mobile-menu-overlay">
+                <div class="absolute right-0 top-0 h-full w-[300px] bg-[#0A1F44] transform translate-x-full transition-transform duration-300"
+                     id="mobile-menu-panel">
+                    <div class="h-full overflow-y-auto custom-scrollbar">
+                        <!-- Mobile Menu Content -->
+                        <div class="p-6 space-y-6">
+                            <!-- Search Bar -->
+                            <div class="relative">
+                                <input type="text" placeholder="Search..." 
+                                       class="w-full bg-white/10 text-white placeholder-white/50 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sequoia-green">
+                                <i class="fas fa-search absolute right-3 top-1/2 -translate-y-1/2 text-white/50"></i>
+                            </div>
+
+                            <!-- Navigation Links -->
+                            <nav class="space-y-2">
+                                <!-- Security Services Dropdown -->
+                                <div class="mobile-dropdown">
+                                    <button class="w-full flex justify-between items-center text-white py-3 hover:text-sequoia-green transition-colors">
+                                        <span class="font-medium">SECURITY SERVICES</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden pl-4 space-y-2 mt-2">
+                                        <a href="/services/guard-services" class="block text-white/80 hover:text-sequoia-green py-2">Guard Services</a>
+                                        <a href="/services/mobile-patrol" class="block text-white/80 hover:text-sequoia-green py-2">Mobile Patrol</a>
+                                        <a href="/services/loss-prevention" class="block text-white/80 hover:text-sequoia-green py-2">Loss Prevention</a>
+                                        <a href="/services/event-security" class="block text-white/80 hover:text-sequoia-green py-2">Event Security Services</a>
+                                        <a href="/services/operations-centres" class="block text-white/80 hover:text-sequoia-green py-2">Operations Centres</a>
+                                        <a href="/services/investigations-risk-management" class="block text-white/80 hover:text-sequoia-green py-2">Investigations & Risk Management</a>
+                                        <a href="/services/parking-management" class="block text-white/80 hover:text-sequoia-green py-2">Parking Management</a>
+                                        <a href="/services/integrated-security-systems" class="block text-white/80 hover:text-sequoia-green py-2">Integrated Security Systems</a>
+                                        <a href="/services/alarm-systems" class="block text-white/80 hover:text-sequoia-green py-2">Alarm Systems</a>
+                                        <a href="/services/access-control" class="block text-white/80 hover:text-sequoia-green py-2">Access Control</a>
+                                        <a href="/services/video-services" class="block text-white/80 hover:text-sequoia-green py-2">Video Services</a>
+                                    </div>
+                                </div>
+
+                                <!-- Industries Dropdown -->
+                                <div class="mobile-dropdown">
+                                    <button class="w-full flex justify-between items-center text-white py-3 hover:text-sequoia-green transition-colors">
+                                        <span class="font-medium">INDUSTRIES</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden pl-4 space-y-2 mt-2">
+                                        <a href="/industries/healthcare" class="block text-white/80 hover:text-sequoia-green py-2">Healthcare</a>
+                                        <a href="/industries/office-commercial" class="block text-white/80 hover:text-sequoia-green py-2">Office & Commercial</a>
+                                        <a href="/industries/retail-shopping-malls" class="block text-white/80 hover:text-sequoia-green py-2">Retail & Shopping Malls</a>
+                                        <a href="/industries/post-secondary" class="block text-white/80 hover:text-sequoia-green py-2">Post Secondary</a>
+                                        <a href="/industries/aviation" class="block text-white/80 hover:text-sequoia-green py-2">Aviation</a>
+                                        <a href="/industries/industrial-security" class="block text-white/80 hover:text-sequoia-green py-2">Industrial Security</a>
+                                        <a href="/industries/government-infrastructure" class="block text-white/80 hover:text-sequoia-green py-2">Government & Infrastructure</a>
+                                        <a href="/industries/warehouse-distribution" class="block text-white/80 hover:text-sequoia-green py-2">Warehouse & Distribution</a>
+                                    </div>
+                                </div>
+
+                                <!-- About Us Dropdown -->
+                                <div class="mobile-dropdown">
+                                    <button class="w-full flex justify-between items-center text-white py-3 hover:text-sequoia-green transition-colors">
+                                        <span class="font-medium">ABOUT US</span>
+                                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="hidden pl-4 space-y-2 mt-2">
+                                        <a href="/about-us/our-story" class="block text-white/80 hover:text-sequoia-green py-2">Our Story</a>
+                                        <a href="/about-us/leadership" class="block text-white/80 hover:text-sequoia-green py-2">Leadership</a>
+                                        <a href="/about-us/community-involvement" class="block text-white/80 hover:text-sequoia-green py-2">Community Involvement</a>
+                                    </div>
+                                </div>
+
+                                <!-- Add other mobile menu items -->
+                            </nav>
+
+                            <!-- Bottom Section -->
+                            <div class="pt-6 border-t border-white/10">
+                                <div class="space-y-4">
+                                    <a href="/careers" class="flex items-center text-white/90 hover:text-sequoia-green">
+                                        <i class="fas fa-briefcase w-6 mr-2"></i>
+                                        <span>Careers</span>
+                                    </a>
+                                    <a href="/login" class="flex items-center text-white/90 hover:text-sequoia-green">
+                                        <i class="fas fa-user w-6 mr-2"></i>
+                                        <span>Employee Login</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    /* Hamburger Menu Animation */
+    .hamburger-line {
+        @apply absolute left-0 w-full h-0.5 bg-white transform transition-all duration-300;
+    }
+
+    .hamburger-line:nth-child(1) {
+        top: 25%;
+    }
+
+    .hamburger-line:nth-child(2) {
+        top: 50%;
+    }
+
+    .hamburger-line:nth-child(3) {
+        top: 75%;
+    }
+
+    #mobile-menu-button.active .hamburger-line:nth-child(1) {
+        @apply top-1/2 rotate-45;
+    }
+
+    #mobile-menu-button.active .hamburger-line:nth-child(2) {
+        @apply opacity-0;
+    }
+
+    #mobile-menu-button.active .hamburger-line:nth-child(3) {
+        @apply top-1/2 -rotate-45;
+    }
+
+    /* Hide header on scroll down, show on scroll up */
+    .header-hidden {
+        transform: translateY(-100%);
+    }
+
+    /* Custom Scrollbar Styles */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    }
+</style>
+
+<script>
+    // Hide header on scroll down, show on scroll up
+    let lastScroll = 0;
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            header.classList.remove('header-hidden');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !header.classList.contains('header-hidden')) {
+            // Scroll Down
+            header.classList.add('header-hidden');
+        } else if (currentScroll < lastScroll && header.classList.contains('header-hidden')) {
+            // Scroll Up
+            header.classList.remove('header-hidden');
+        }
+        
+        lastScroll = currentScroll;
+    });
+
+    // Updated Mobile Menu JavaScript
+    function initializeMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+        const dropdowns = document.querySelectorAll('.mobile-dropdown button');
+
+        if (mobileMenuButton && mobileMenuOverlay) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenuButton.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('opacity-0');
+                mobileMenuOverlay.classList.toggle('pointer-events-none');
+                mobileMenuPanel.classList.toggle('translate-x-full');
+            });
+
+            // Close menu when clicking overlay
+            mobileMenuOverlay.addEventListener('click', (e) => {
+                if (e.target === mobileMenuOverlay) {
+                    mobileMenuButton.classList.remove('active');
+                    mobileMenuOverlay.classList.add('opacity-0', 'pointer-events-none');
+                    mobileMenuPanel.classList.add('translate-x-full');
+                }
+            });
+        }
+
+        // Handle dropdowns
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', (e) => {
+                const content = e.target.closest('.mobile-dropdown').querySelector('div');
+                const icon = e.target.querySelector('i');
+                if (content && icon) {
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                }
+            });
+        });
+    }
+</script> 

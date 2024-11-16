@@ -1,0 +1,16 @@
+:root {
+    /* Brand Colors */
+    --sequoia-green: #006D5B;
+    --sequoia-dark-green: #004D3D;
+    --sequoia-black: #000000;
+    --sequoia-white: #FFFFFF;
+    
+    /* Text Colors */
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-light: #FFFFFF;
+    
+    /* Background Colors */
+    --bg-dark: rgba(0, 0, 0, 0.9);
+    --bg-light: rgba(255, 255, 255, 0.95);
+} 
