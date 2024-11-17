@@ -30,7 +30,7 @@
             }
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+   
     <!-- Add Leaflet CSS in head -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -40,14 +40,14 @@
     <!-- Header will be loaded here -->
     <div id="header-container"></div>
 
-    <main class="pt-16">
+    <main class="pt-[88px] xl:pt-[112px] relative z-1">
         <!-- Main Content Sections -->
-        <section class="relative min-h-screen bg-gradient-to-br from-sequoia-dark-green via-sequoia-green to-black overflow-hidden">
+        <section class="relative z-20 min-h-[calc(100vh-88px)] xl:min-h-[calc(100vh-112px)] bg-gradient-to-br from-sequoia-dark-green via-sequoia-green to-black overflow-hidden">
             <!-- Background Overlay Pattern -->
             <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             
             <!-- Content Container -->
-            <div class="container mx-auto px-4 relative z-10 min-h-screen flex items-center">
+            <div class="container mx-auto px-4 relative z-10 h-full flex items-center py-16 lg:py-24">
                 <div class="max-w-3xl">
                     <!-- Animated Title -->
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-in">
@@ -397,19 +397,28 @@
 
                 <!-- Map Container with Fixed Layout -->
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 relative rounded-2xl overflow-hidden shadow-2xl">
-                    <!-- Location List - Takes 1 column on mobile, 1 column out of 4 on desktop -->
-                    <div class="lg:col-span-1 bg-white p-6 rounded-lg shadow-lg">
-                        <div class="space-y-4">
-                            <div class="location-card p-4 bg-gray-50 rounded-lg">
-                                <h3 class="font-semibold text-[#0A1F44]">Sequoia Security Kamloops</h3>
-                                <p class="text-sm text-gray-600">293 Arrowstone Drive</p>
-                                <p class="text-sm text-gray-600">Kamloops, BC V2C1P8</p>
-                                <p class="text-sm text-gray-600">Contact: RH Mahamud</p>
-                                <div class="mt-2 flex items-center text-sequoia-green text-sm">
-                                    <i class="fas fa-phone-alt mr-2"></i>
-                                    <span>1-877-358-0441</span>
+                    <!-- Location List - Improved layout -->
+                    <div class="lg:col-span-1 bg-white p-6 rounded-lg shadow-lg max-h-[500px] overflow-y-auto">
+                        <h3 class="font-bold text-xl text-[#0A1F44] mb-6">Our Locations</h3>
+                        <div class="space-y-6">
+                            <div class="location-card p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors duration-300 cursor-pointer border border-gray-100">
+                                <h3 class="font-semibold text-[#0A1F44] mb-2">Sequoia Security Kamloops</h3>
+                                <div class="space-y-2 text-gray-600">
+                                    <p class="text-sm flex items-start">
+                                        <i class="fas fa-map-marker-alt w-5 mt-1"></i>
+                                        <span class="ml-2">293 Arrowstone Drive<br>Kamloops, BC V2C1P8</span>
+                                    </p>
+                                    <p class="text-sm flex items-center">
+                                        <i class="fas fa-user w-5"></i>
+                                        <span class="ml-2">Contact: RH Mahamud</span>
+                                    </p>
+                                    <a href="tel:18773580441" class="text-sm flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                                        <i class="fas fa-phone-alt w-5"></i>
+                                        <span class="ml-2">1-877-358-0441</span>
+                                    </a>
                                 </div>
                             </div>
+                            <!-- Add more location cards here -->
                         </div>
                     </div>
 
@@ -543,35 +552,79 @@
 
         // Function to initialize mobile menu
         function initializeMobileMenu() {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const dropdowns = document.querySelectorAll('.mobile-dropdown button');
+            const menu = document.getElementById('mobile-menu');
+            const openButton = document.getElementById('mobile-menu-button');
+            const closeButton = document.getElementById('mobile-menu-close');
 
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    // Toggle menu icon
-                    const menuOpen = mobileMenuButton.querySelector('.menu-open');
-                    const menuClose = mobileMenuButton.querySelector('.menu-close');
-                    menuOpen.classList.toggle('hidden');
-                    menuClose.classList.toggle('hidden');
+            if (menu && openButton && closeButton) {
+                const toggleMenu = (show) => {
+                    menu.classList.toggle('active', show);
+                    openButton.classList.toggle('active', show);
+                    document.body.classList.toggle('overflow-hidden', show);
+                    
+                    // If closing, wait for animation to complete before hiding
+                    if (!show) {
+                        setTimeout(() => {
+                            if (!menu.classList.contains('active')) {
+                                menu.classList.add('invisible');
+                            }
+                        }, 300); // Match transition duration
+                    } else {
+                        menu.classList.remove('invisible');
+                    }
+                };
+
+                // Open menu
+                openButton.addEventListener('click', () => {
+                    console.log('Opening menu');
+                    toggleMenu(true);
                 });
-            }
 
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener('click', (e) => {
-                    const content = e.target.nextElementSibling;
-                    if (content) {
-                        content.classList.toggle('hidden');
+                // Close menu
+                const closeMenu = () => {
+                    console.log('Closing menu');
+                    toggleMenu(false);
+                };
+
+                // Close button click
+                closeButton.addEventListener('click', closeMenu);
+
+                // Click outside to close
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        closeMenu();
                     }
                 });
-            });
+
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && menu.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
         }
 
-        // Load components when DOM is ready
-        document.addEventListener('DOMContentLoaded', function() {
-            loadComponent('header.html', 'header-container');
-            loadComponent('footer.html', 'footer-container');
+        // Initialize after DOM loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load header
+            loadComponent('header.html', 'header-container')
+                .then(() => {
+                    console.log('Header loaded');
+                    initializeMobileMenu();
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                });
+
+            // Load footer
+            loadComponent('footer.html', 'footer-container')
+                .then(() => {
+                    console.log('Footer loaded');
+                })
+                .catch(error => {
+                    console.error('Error loading footer:', error);
+                });
         });
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -627,6 +680,108 @@
         .leaflet-container a.leaflet-popup-close-button {
             color: #666;
             padding: 8px;
+        }
+
+        /* Add these styles to your existing styles */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1280px;
+            }
+        }
+
+        /* Ensure header stays on top */
+        #main-header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        /* Prevent content from getting behind header */
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Adjust section heights for smaller screens */
+        @media (max-width: 640px) {
+            .min-h-screen {
+                min-height: calc(100vh - 80px);
+            }
+        }
+
+        /* Ensure proper stacking context */
+        .relative {
+            position: relative;
+        }
+
+        .z-10 {
+            z-index: 1;
+        }
+
+        .z-20 {
+            z-index: 2;
+        }
+
+        .z-30 {
+            z-index: 3;
+        }
+
+        /* Update the responsive styles */
+        @media (max-width: 1280px) {
+            main {
+                padding-top: 88px; /* Match header height for non-xl screens */
+            }
+            .min-h-screen {
+                min-height: calc(100vh - 88px);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            main {
+                padding-top: 112px; /* Match header height for xl screens */
+            }
+            .min-h-screen {
+                min-height: calc(100vh - 112px);
+            }
+        }
+
+        /* Ensure header height matches padding */
+        #main-header {
+            height: 88px; /* Default height */
+        }
+
+        @media (min-width: 1280px) {
+            #main-header {
+                height: 112px; /* XL screen height */
+            }
         }
     </style>
     <!-- Add Leaflet JS before your closing body tag -->
