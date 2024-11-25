@@ -42,9 +42,17 @@
 
     <main class="pt-[88px] xl:pt-[112px] relative z-1">
         <!-- Main Content Sections -->
-        <section class="relative z-20 min-h-[calc(100vh-88px)] xl:min-h-[calc(100vh-112px)] bg-gradient-to-br from-sequoia-dark-green via-sequoia-green to-black overflow-hidden">
-            <!-- Background Overlay Pattern -->
-            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <section class="relative z-20 min-h-[calc(100vh-88px)] xl:min-h-[calc(100vh-112px)] overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/banner.png" alt="Security Background" class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Dark Gradient Overlay - Reduced opacity -->
+            <div class="absolute inset-0 bg-gradient-to-br from-sequoia-dark-green/60 via-sequoia-green/50 to-black/70 z-0"></div>
+            
+            <!-- Background Overlay Pattern - Reduced opacity -->
+            <div class="absolute inset-0 bg-grid-pattern opacity-5 z-0"></div>
             
             <!-- Content Container -->
             <div class="container mx-auto px-4 relative z-10 h-full flex items-center py-16 lg:py-24">
@@ -85,7 +93,7 @@
             </div>
 
             <!-- Decorative Elements -->
-            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent z-0"></div>
         </section>
 
         <!-- The Sequoia Difference -->
@@ -120,7 +128,7 @@
                     <!-- Security Guards Card -->
                     <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
-                        <img src="assets/images/security-guards.jpg" alt="Security Guards" 
+                        <img src="assets/images/security_guard.png" alt="Security Guards" 
                              class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
                             <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -143,7 +151,7 @@
                     <!-- Mobile Patrol Card -->
                     <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
-                        <img src="assets/images/mobile-patrol.jpg" alt="Mobile Patrol" 
+                        <img src="assets/images/mobile_patrol.png" alt="Mobile Patrol" 
                              class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
                             <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -166,7 +174,7 @@
                     <!-- Loss Prevention Card -->
                     <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
-                        <img src="assets/images/loss-prevention.jpg" alt="Loss Prevention" 
+                        <img src="assets/images/loss_preventation.png" alt="Loss Prevention" 
                              class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
                             <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -189,7 +197,7 @@
                     <!-- Special Events Card -->
                     <div class="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:shadow-2xl">
                         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10"></div>
-                        <img src="assets/images/special-events.jpg" alt="Special Events" 
+                        <img src="assets/images/special_events.png" alt="Special Events" 
                              class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-700">
                         <div class="absolute inset-0 z-20 p-8 flex flex-col justify-end">
                             <h3 class="text-2xl font-bold text-white mb-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
@@ -444,21 +452,21 @@
                     <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                         <div class="relative h-64 overflow-hidden">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
-                            <img src="assets/images/mentorship.jpg" alt="Mentorship" class="w-full h-full object-cover">
+                            <img src="assets/images/mentoship.png" alt="Mentorship" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 z-20">
                                 <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
-                                    Careers in Security
+                                    Industry Insights
                                 </span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#0A1F44] mb-3">
-                                EP 36: The Power of Mentorship and Education
+                                Building a Career in Modern Security
                             </h3>
                             <p class="text-gray-600 mb-4">
-                                Did you catch our latest episode of The Difference Makers podcast? We had the honour of speaking with Yvette Lacosse...
+                                Discover how technology and specialized training are reshaping security careers. Learn about emerging opportunities in cybersecurity integration and advanced surveillance systems...
                             </p>
-                            <a href="/blog/mentorship-education" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                            <a href="/blog/modern-security-careers" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
                                 Read More
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -467,25 +475,25 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 - Nick Khoja -->
+                    <!-- Card 2 - Security Excellence -->
                     <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                         <div class="relative h-64 overflow-hidden">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
-                            <img src="assets/images/care-culture.jpg" alt="Care Culture" class="w-full h-full object-cover">
+                            <img src="assets/images/corporate.png" alt="Care Culture" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 z-20">
                                 <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
-                                    Care Culture
+                                    Best Practices
                                 </span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h3 class="text-xl font-bold text-[#0A1F44] mb-3">
-                                Then & Now: Nick Khoja
+                                Excellence in Corporate Security
                             </h3>
                             <p class="text-gray-600 mb-4">
-                                At Paladin, we're all about helping our team members grow and reach their full potential. The first value of Paladin's C.A.R.E culture is to...
+                                Explore how Sequoia Security is revolutionizing corporate security through integrated solutions, AI-powered surveillance, and comprehensive risk management strategies...
                             </p>
-                            <a href="/blog/nick-khoja" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
+                            <a href="/blog/corporate-security-excellence" class="inline-flex items-center text-sequoia-green hover:text-sequoia-dark-green transition-colors duration-300">
                                 Read More
                                 <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
@@ -498,7 +506,7 @@
                     <div class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                         <div class="relative h-64 overflow-hidden">
                             <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60 z-10"></div>
-                            <img src="assets/images/future-security.jpg" alt="Future of Security" class="w-full h-full object-cover">
+                            <img src="assets/images/future_security_guards.png" alt="Future of Security" class="w-full h-full object-cover">
                             <div class="absolute bottom-4 left-4 z-20">
                                 <span class="text-xs uppercase tracking-wider text-white bg-sequoia-green px-3 py-1 rounded-full">
                                     Careers in Security
@@ -522,8 +530,7 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </section>    </main>
 
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
