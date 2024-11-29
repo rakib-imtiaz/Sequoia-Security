@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Security Services | Sequoia Security</title>
+    <!-- Standard imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Parallax Hero Section -->
+        <section class="relative min-h-screen flex items-center mt-[88px] overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="/assets/images/special_events.png" alt="Event Security" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-6xl md:text-8xl font-bold text-white mb-8">
+                        Event Security
+                        <div class="text-sequoia-green">Excellence</div>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-12">
+                        Ensuring the safety and success of your events with professional security services
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="#quote" class="group relative inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg overflow-hidden">
+                            <span class="relative z-10 text-lg font-medium">Get Event Quote</span>
+                            <div class="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                            <i class="relative z-10 fas fa-arrow-right ml-2 group-hover:text-sequoia-dark-green"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- After the hero section, add this content section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold text-[#0A1F44] mb-8">
+                            SECURITY COVERAGE FOR YOUR
+                            <span class="text-sequoia-green">NEXT EVENT</span>
+                        </h2>
+                        <div class="space-y-6 text-gray-600">
+                            <p class="text-lg">
+                                Whether you are hosting a local fundraising event or a substantial concert, trust the most experienced and professional security provider as your partner to deliver the desired experience.
+                            </p>
+                            <p class="text-lg">
+                                Event security officers will keep guests and staff safe, reduce damage to the venue, ensure compliance with liquor licenses, prevent intruders, and maintain timely and orderly access to the property. Many municipalities require an event security or safety plan and we can help you create that.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="/assets/images/event_security_officer.jpg" alt="Event Security Officer" 
+                             class="rounded-xl shadow-2xl w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-[#0A1F44] mb-12">WE PROVIDE SECURITY SERVICES FOR:</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Concert Security -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-music text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Concert Security</h3>
+                        <p class="text-gray-600">Professional security for music events and concerts of all sizes.</p>
+                    </div>
+
+                    <!-- Corporate Events -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-building text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Corporate Event Security</h3>
+                        <p class="text-gray-600">Specialized security for corporate gatherings and functions.</p>
+                    </div>
+
+                    <!-- Trade Shows -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-booth-curtain text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Trade Show Security</h3>
+                        <p class="text-gray-600">Comprehensive security for exhibitions and trade shows.</p>
+                    </div>
+
+                    <!-- Sporting Events -->
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-basketball text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Sporting Event Security</h3>
+                        <p class="text-gray-600">Specialized security for sports events and tournaments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-[#0A1F44] mb-12">OUR EVENT SECURITY FEATURES</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-shield-alt text-2xl text-sequoia-green"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Crowd Management</h3>
+                                <p class="text-gray-600">Professional crowd control and management to ensure orderly event flow.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-id-badge text-2xl text-sequoia-green"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Access Control</h3>
+                                <p class="text-gray-600">Strict access control and badge checking procedures.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6">
+                            <div class="w-12 h-12 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clipboard-check text-2xl text-sequoia-green"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Event Planning</h3>
+                                <p class="text-gray-600">Comprehensive security planning and risk assessment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form with Event Details -->
+        <section id="quote" class="py-20 bg-sequoia-dark-green">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <!-- Form content -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+</body>
+</html>

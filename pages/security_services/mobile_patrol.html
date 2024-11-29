@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Patrol Services | Sequoia Security</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center mt-[88px]">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/mobile_patrol.png" alt="Mobile Patrol" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-sequoia-dark-green/90 to-black/70"></div>
+                <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            </div>
+
+            <div class="container mx-auto px-4 py-20 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8">
+                        Mobile Patrol 
+                        <span class="text-sequoia-green">Security Services</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-12">
+                        Enhance your property's security with our state-of-the-art mobile patrol fleet. Dynamic protection that keeps your assets safe 24/7.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#contact" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-sequoia-dark-green transition-all duration-300 text-lg">
+                            Request Service
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-sequoia-dark-green transition-all duration-300 text-lg">
+                            Learn More
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Security Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">ENHANCED SITE SECURITY, 24/7</h2>
+                
+                <!-- Description -->
+                <div class="max-w-4xl mx-auto text-lg text-gray-600 text-center mb-16">
+                    Our highly trained mobile team is here to keep your property safe and sound. They patrol in our top-of-the-line marked security vehicles at scheduled times, random intervals, or in response to alarms. Using state-of-the-art handheld technology, they'll log every site check-in and check-out, ensuring a secure environment for your facility.
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                    <!-- Alarm Response -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-bell text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Alarm Response</h3>
+                        <p class="text-gray-600">Immediate response to security alerts with trained professionals.</p>
+                    </div>
+
+                    <!-- Scheduled Patrols -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-route text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Scheduled Patrols</h3>
+                        <p class="text-gray-600">Regular and random patrol schedules for optimal security coverage.</p>
+                    </div>
+
+                    <!-- Static Officer Support -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-user-shield text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Static Officer Support</h3>
+                        <p class="text-gray-600">Supplementary security personnel for enhanced protection.</p>
+                    </div>
+
+                    <!-- Lock/Unlock Services -->
+                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-key text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Lock/Unlock Services</h3>
+                        <p class="text-gray-600">Secure key management and access control services.</p>
+                    </div>
+                </div>
+
+                <!-- Fleet Highlight -->
+                <div class="mt-16 bg-sequoia-dark-green/5 rounded-2xl p-8 max-w-3xl mx-auto text-center">
+                    <div class="w-20 h-20 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-car-side text-4xl text-sequoia-green"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Western Canada's Premier Security Fleet</h3>
+                    <p class="text-gray-600">
+                        Get 24/7 support with our extensive fleet of modern, GPS-equipped security vehicles, providing unmatched coverage and rapid response times.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Details -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                            Elite Mobile Security 
+                            <span class="text-sequoia-green">That Goes Further</span>
+                        </h2>
+                        <p class="text-gray-600 mb-8">
+                            Our mobile patrol officers undergo rigorous training beyond industry standards, equipped with the latest technology and protocols to ensure your property's safety.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Property Inspections</h3>
+                                    <p class="text-gray-600">Thorough checks for damage, security breaches, and safety hazards.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Digital Reporting</h3>
+                                    <p class="text-gray-600">Real-time incident reporting and patrol tracking through our advanced system.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Emergency Response</h3>
+                                    <p class="text-gray-600">Rapid deployment to emergencies with trained professionals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-6xl text-sequoia-green mb-4"></i>
+                            <div class="text-xl font-semibold">Protection</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-car-side text-6xl text-sequoia-green mb-4"></i>
+                            <div class="text-xl font-semibold">Mobility</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-clock text-6xl text-sequoia-green mb-4"></i>
+                            <div class="text-xl font-semibold">24/7 Service</div>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-leaf text-6xl text-sequoia-green mb-4"></i>
+                            <div class="text-xl font-semibold">Eco-Friendly</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="p-12 bg-sequoia-dark-green text-white">
+                            <h2 class="text-3xl font-bold mb-6">Get Started Today</h2>
+                            <p class="mb-8">Contact us to learn how our mobile patrol services can enhance your property's security.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone-alt w-8"></i>
+                                    <span>1-877-358-0441</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope w-8"></i>
+                                    <span>info@sequoia.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-12">
+                            <form class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                    <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-sequoia-green text-white py-3 rounded-lg hover:bg-sequoia-dark-green transition-colors">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+
+    <script>
+        function initializeMobileMenu() {
+            const mobileMenuButton = document.querySelector('[data-mobile-menu]');
+            const mobileMenu = document.querySelector('[data-mobile-menu-panel]');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

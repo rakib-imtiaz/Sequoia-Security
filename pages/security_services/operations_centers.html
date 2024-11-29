@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations Centers | Sequoia Security</title>
+    <!-- Standard imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Modern Hero Section with Video Background -->
+        <section class="relative min-h-[85vh] flex items-center mt-[88px]">
+            <div class="absolute inset-0 bg-black">
+                <video class="w-full h-full object-cover opacity-50" autoplay loop muted playsinline>
+                    <source src="/assets/videos/ops-center.mp4" type="video/mp4">
+                </video>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-sequoia-green/20 rounded-full mb-6">
+                        <div class="w-2 h-2 bg-sequoia-green rounded-full animate-pulse"></div>
+                        <span class="text-sequoia-green font-medium">24/7 Live Monitoring</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8">
+                        State of the Art
+                        <span class="text-sequoia-green block">Monitored Security Programs</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-12">
+                        Within moments of a call being received, the process to rapidly meet client and employee concerns is set in action.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Statistics Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Stat Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-sequoia-green">
+                        <div class="text-4xl font-bold text-sequoia-green mb-2">25+</div>
+                        <h3 class="text-xl font-bold mb-2">Customer Service Reps</h3>
+                        <p class="text-gray-600">On duty 24/7 to serve client and employee needs</p>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-sequoia-green">
+                        <div class="text-4xl font-bold text-sequoia-green mb-2">3</div>
+                        <h3 class="text-xl font-bold mb-2">Operation Centers</h3>
+                        <p class="text-gray-600">Located in Victoria, Vancouver, and Toronto</p>
+                    </div>
+
+                    <!-- Stat Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-sequoia-green">
+                        <div class="text-4xl font-bold text-sequoia-green mb-2">24/7</div>
+                        <h3 class="text-xl font-bold mb-2">ULC-Listed Monitoring</h3>
+                        <p class="text-gray-600">Continuous security program integration</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-16">
+                    Why Our Operations Centres
+                    <span class="text-sequoia-green block">Lead the Industry</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-sequoia-green/20">
+                            <i class="fas fa-microchip text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Advanced Technology</h3>
+                        <p class="text-gray-600">Embracing evolving infrastructure and modern solutions for exceptional service delivery.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-sequoia-green/20">
+                            <i class="fas fa-users-cog text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Strategic Scheduling</h3>
+                        <p class="text-gray-600">Matching officer skills and training levels to site requirements while planning for future events.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-sequoia-green/20">
+                            <i class="fas fa-chart-line text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Incident Management</h3>
+                        <p class="text-gray-600">Comprehensive tracking and reporting with transparent metrics and detailed overviews.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Capabilities Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-white mb-16">
+                    Advanced Security
+                    <span class="text-sequoia-green block">Capabilities</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Capability 1 -->
+                    <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-server text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Redundant Systems</h3>
+                        <p class="text-gray-400">Fully supported infrastructure ensures operation under adverse conditions.</p>
+                    </div>
+
+                    <!-- Capability 2 -->
+                    <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">ULC-Listed Certification</h3>
+                        <p class="text-gray-400">Meeting and exceeding the highest industry standards for monitoring reliability.</p>
+                    </div>
+
+                    <!-- Capability 3 -->
+                    <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-cogs text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Customizable Programs</h3>
+                        <p class="text-gray-400">Tailor-made solutions evolving beyond traditional security command centre capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Coverage Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-16">
+                    Comprehensive Coverage
+                    <span class="text-sequoia-green block">Coast to Coast</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Location 1 -->
+                    <div class="relative overflow-hidden rounded-xl group">
+                        <img src="/assets/images/vancouver.jpg" alt="Vancouver Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Vancouver</h3>
+                            <p class="text-sequoia-green">Western Operations Hub</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 2 -->
+                    <div class="relative overflow-hidden rounded-xl group">
+                        <img src="/assets/images/victoria.jpg" alt="Victoria Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Victoria</h3>
+                            <p class="text-sequoia-green">Pacific Command Center</p>
+                        </div>
+                    </div>
+
+                    <!-- Location 3 -->
+                    <div class="relative overflow-hidden rounded-xl group">
+                        <img src="/assets/images/toronto.jpg" alt="Toronto Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <h3 class="text-xl font-bold text-white">Toronto</h3>
+                            <p class="text-sequoia-green">Eastern Command Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+</body>
+</html>

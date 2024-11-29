@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management | Sequoia Security</title>
+    <!-- Standard imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Modern Hero Section -->
+        <section class="relative min-h-[80vh] flex items-center mt-[88px]">
+            <div class="absolute inset-0">
+                <img src="/assets/images/parking_hero.jpg" alt="Parking Management" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-sequoia-dark-green/90 to-black/70"></div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-8">
+                        Smart Parking
+                        <span class="text-sequoia-green">Management Solutions</span>
+                    </h1>
+                    <p class="text-xl text-gray-200 mb-12">
+                        Comprehensive parking solutions for modern facilities, combining security and efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#solutions" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-white hover:text-sequoia-dark-green transition-all duration-300">
+                            Explore Solutions
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Solutions Grid -->
+        <section id="solutions" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Solutions By Industry</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Commercial Properties -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                        <div class="h-48 overflow-hidden">
+                            <img src="/assets/images/commercial.jpg" alt="Commercial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4">Commercial Properties</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-sequoia-green mr-2"></i>
+                                    Access Control Systems
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check text-sequoia-green mr-2"></i>
+                                    24/7 Monitoring
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add more industry cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-8">
+                            Comprehensive
+                            <span class="text-sequoia-green">Parking Solutions</span>
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-2xl text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold mb-2">Enhanced Security</h3>
+                                    <p class="text-gray-600">Advanced surveillance and access control systems.</p>
+                                </div>
+                            </div>
+                            <!-- Add more features -->
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="/assets/images/parking_features.jpg" alt="Features" class="rounded-xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="bg-sequoia-dark-green py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-white mb-8">Ready to Optimize Your Parking Operations?</h2>
+                <a href="#contact" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-white hover:text-sequoia-dark-green transition-all duration-300">
+                    Get Started Today
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+</body>
+</html>

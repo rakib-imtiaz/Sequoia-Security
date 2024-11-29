@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Guard Services | Sequoia Security</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <!-- Header will be loaded here -->
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Hero Section - Increased height -->
+        <section class="relative min-h-[85vh] flex items-center mt-[88px]">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/security_guard.png" alt="Security Guard" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-sequoia-dark-green/90 to-black/70"></div>
+                <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            </div>
+
+            <!-- Content - Added more padding for better vertical spacing -->
+            <div class="container mx-auto px-4 py-20 relative z-10">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8">
+                        Professional Security 
+                        <span class="text-sequoia-green">Guard Services</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-200 mb-12">
+                        Our security officers are dedicated to making the world a safer and friendlier place through exceptional service and unwavering commitment to your security needs.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="#contact" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-sequoia-dark-green transition-all duration-300 text-lg">
+                            Get a Quote
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#services" class="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-sequoia-dark-green transition-all duration-300 text-lg">
+                            Learn More
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-2xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">24/7 Professional Security</h3>
+                        <p class="text-gray-600">Round-the-clock protection with highly trained security personnel ready to respond to any situation.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-user-tie text-2xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Trained & Licensed Guards</h3>
+                        <p class="text-gray-600">All our security officers are fully licensed, extensively trained, and regularly updated on the latest security protocols.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-cog text-2xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Customized Solutions</h3>
+                        <p class="text-gray-600">Tailored security plans designed to meet your specific needs and requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Detail Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                            Comprehensive Security 
+                            <span class="text-sequoia-green">Guard Services</span>
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Access Control</h3>
+                                    <p class="text-gray-600">Professional management of entry points and visitor screening.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Patrol Services</h3>
+                                    <p class="text-gray-600">Regular security patrols and monitoring of your premises.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-8 h-8 bg-sequoia-green/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-sequoia-green"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Emergency Response</h3>
+                                    <p class="text-gray-600">Quick and efficient response to security incidents and emergencies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative bg-gray-50 p-12 rounded-xl shadow-2xl">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt text-6xl text-sequoia-green mb-4"></i>
+                                <div class="text-xl font-semibold">Protection</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-user-shield text-6xl text-sequoia-green mb-4"></i>
+                                <div class="text-xl font-semibold">Security</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-clock text-6xl text-sequoia-green mb-4"></i>
+                                <div class="text-xl font-semibold">24/7 Service</div>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-certificate text-6xl text-sequoia-green mb-4"></i>
+                                <div class="text-xl font-semibold">Certified</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-6 -right-6 bg-sequoia-green text-white p-6 rounded-xl shadow-xl">
+                            <!-- <div class="text-4xl font-bold mb-2">15+</div>
+                            <div class="text-sm">Years of Excellence</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve -->
+        <section class="py-20 bg-[#0A1F44] text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Industries We Serve</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Healthcare -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-hospital text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Healthcare</h3>
+                        <p class="text-gray-300 text-sm">Specialized security for medical facilities</p>
+                    </div>
+
+                    <!-- Commercial -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-building text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Commercial</h3>
+                        <p class="text-gray-300 text-sm">Office buildings & corporate facilities</p>
+                    </div>
+
+                    <!-- Retail -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-shopping-cart text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Retail</h3>
+                        <p class="text-gray-300 text-sm">Shopping centers & retail locations</p>
+                    </div>
+
+                    <!-- Industrial -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-industry text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Industrial</h3>
+                        <p class="text-gray-300 text-sm">Manufacturing & warehouse security</p>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-graduation-cap text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Education</h3>
+                        <p class="text-gray-300 text-sm">Schools & educational institutions</p>
+                    </div>
+
+                    <!-- Government -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-landmark text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Government</h3>
+                        <p class="text-gray-300 text-sm">Government facilities & infrastructure</p>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-calendar-alt text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Events</h3>
+                        <p class="text-gray-300 text-sm">Special events & venue security</p>
+                    </div>
+
+                    <!-- Residential -->
+                    <div class="text-center group">
+                        <div class="w-20 h-20 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-sequoia-green transition-all duration-300">
+                            <i class="fas fa-home text-3xl text-sequoia-green group-hover:text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-2">Residential</h3>
+                        <p class="text-gray-300 text-sm">Residential communities & complexes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        <div class="p-12 bg-sequoia-dark-green text-white">
+                            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+                            <p class="mb-8">Contact us today to discuss your security needs and how we can help protect what matters most to you.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone-alt w-8"></i>
+                                    <span>1-877-358-0441</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope w-8"></i>
+                                    <span>info@sequoia.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-12">
+                            <form class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                    <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-sequoia-green focus:border-sequoia-green" rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-sequoia-green text-white py-3 rounded-lg hover:bg-sequoia-dark-green transition-colors">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        // Your existing component loading script
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+                
+                // Remove or comment out this conditional since the function doesn't exist
+                // if (containerId === 'header-container') {
+                //     initializeMobileMenu();
+                // }
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+
+    <script>
+        function initializeMobileMenu() {
+            // Add your mobile menu initialization code here
+            const mobileMenuButton = document.querySelector('[data-mobile-menu]');
+            const mobileMenu = document.querySelector('[data-mobile-menu-panel]');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

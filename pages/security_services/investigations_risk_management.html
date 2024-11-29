@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigations & Risk Management | Sequoia Security</title>
+    <!-- Standard imports -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Hero Section with Parallax Effect -->
+        <section class="relative min-h-[85vh] flex items-center mt-[88px]">
+            <div class="absolute inset-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60 z-10"></div>
+                <img src="/assets/images/investigations_hero.jpg" alt="Investigations" class="w-full h-full object-cover">
+            </div>
+            <div class="container mx-auto px-4 relative z-20">
+                <div class="max-w-4xl">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-sequoia-green/20 rounded-full mb-6">
+                        <i class="fas fa-shield-alt text-sequoia-green"></i>
+                        <span class="text-sequoia-green font-medium">INTELLIGENCE SOLUTIONS</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-8">
+                        CORPORATE, LEGAL & INSURANCE
+                        <span class="text-sequoia-green block mt-2">INVESTIGATION SOLUTIONS</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Comprehensive Investigation and Surveillance Services Available Nationwide.
+                    </p>
+                    <div class="flex flex-wrap gap-4 text-gray-300">
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fas fa-globe text-sequoia-green"></i> Global Reach
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-sequoia-green"></i> Local Knowledge
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fas fa-star text-sequoia-green"></i> Experience
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <i class="fas fa-search text-sequoia-green"></i> Intelligence Gathering
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Grid -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-building text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Workplace and HR Investigations</h3>
+                        <p class="text-gray-600 mb-6">
+                            Expert handling of human resources challenges and sensitive workplace matters with meticulous attention to detail.
+                        </p>
+                        <a href="#" class="text-sequoia-green hover:text-sequoia-dark-green flex items-center gap-2">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-gavel text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Litigation Support</h3>
+                        <p class="text-gray-600 mb-6">
+                            Comprehensive support for legal proceedings with expert testimony and evidence presentation.
+                        </p>
+                        <a href="#" class="text-sequoia-green hover:text-sequoia-dark-green flex items-center gap-2">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Regulatory Compliance</h3>
+                        <p class="text-gray-600 mb-6">
+                            Expert guidance in healthcare, legal, and government sector compliance investigations.
+                        </p>
+                        <a href="#" class="text-sequoia-green hover:text-sequoia-dark-green flex items-center gap-2">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Digital Investigations Section -->
+        <section class="py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-800 rounded-xl p-8 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-laptop text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Digital Forensics</h3>
+                        <p class="text-gray-400">
+                            State-of-the-art digital evidence collection and analysis from electronic devices.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-800 rounded-xl p-8 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-fingerprint text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Intellectual Property</h3>
+                        <p class="text-gray-400">
+                            Protection against theft and unauthorized distribution of intellectual property.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-800 rounded-xl p-8 border-l-4 border-sequoia-green">
+                        <div class="w-16 h-16 bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-search text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Surveillance Operations</h3>
+                        <p class="text-gray-400">
+                            Covert operations and workplace surveillance with expert investigators.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8">Submit an Investigation Request</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Connect with our team of experts to discuss your investigation needs and discover tailored solutions for your organization.
+                </p>
+                <a href="#investigation-request" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-sequoia-dark-green transition-all duration-300">
+                    Start Investigation Request
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/header.html', 'header-container');
+            loadComponent('/footer.html', 'footer-container');
+        });
+    </script>
+</body>
+</html>
