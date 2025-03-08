@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="/">
+    <base href="/Sequoia-Security/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Guard Services | Sequoia Security</title>
@@ -12,7 +12,7 @@
     <!-- Inter Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/Sequoia-Security/assets/css/components.css">
     
     <script>
         tailwind.config = {
@@ -41,7 +41,7 @@
         <section class="relative min-h-[85vh] flex items-center mt-[88px]">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="/assets/images/security_guard.png" alt="Security Guard" class="w-full h-full object-cover">
+                <img src="/Sequoia-Security/assets/images/security_guard.png" alt="Security Guard" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-sequoia-dark-green/90 to-black/70"></div>
                 <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
             </div>
@@ -309,10 +309,10 @@
                 const html = await response.text();
                 document.getElementById(containerId).innerHTML = html;
                 
-                // Remove or comment out this conditional since the function doesn't exist
-                // if (containerId === 'header-container') {
-                //     initializeMobileMenu();
-                // }
+                // Uncomment this conditional to initialize mobile menu after header loads
+                if (containerId === 'header-container') {
+                    initializeMobileMenu();
+                }
             } catch (error) {
                 console.error('Error loading component:', error);
                 document.getElementById(containerId).innerHTML = 
@@ -321,20 +321,63 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('/header.html', 'header-container');
-            loadComponent('/footer.html', 'footer-container');
+            loadComponent('/Sequoia-Security/header.html', 'header-container');
+            loadComponent('/Sequoia-Security/footer.html', 'footer-container');
         });
     </script>
 
     <script>
+        // Updated function to match the implementation in index.html
         function initializeMobileMenu() {
-            // Add your mobile menu initialization code here
-            const mobileMenuButton = document.querySelector('[data-mobile-menu]');
-            const mobileMenu = document.querySelector('[data-mobile-menu-panel]');
-            
-            if (mobileMenuButton && mobileMenu) {
-                mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+            const menu = document.getElementById('mobile-menu');
+            const openButton = document.getElementById('mobile-menu-button');
+            const closeButton = document.getElementById('mobile-menu-close');
+
+            if (menu && openButton && closeButton) {
+                const toggleMenu = (show) => {
+                    menu.classList.toggle('active', show);
+                    openButton.classList.toggle('active', show);
+                    document.body.classList.toggle('overflow-hidden', show);
+                    
+                    // If closing, wait for animation to complete before hiding
+                    if (!show) {
+                        setTimeout(() => {
+                            if (!menu.classList.contains('active')) {
+                                menu.classList.add('invisible');
+                            }
+                        }, 300); // Match transition duration
+                    } else {
+                        menu.classList.remove('invisible');
+                    }
+                };
+
+                // Open menu
+                openButton.addEventListener('click', () => {
+                    console.log('Opening menu');
+                    toggleMenu(true);
+                });
+
+                // Close menu
+                const closeMenu = () => {
+                    console.log('Closing menu');
+                    toggleMenu(false);
+                };
+
+                // Close button click
+                closeButton.addEventListener('click', closeMenu);
+
+                // Click outside to close
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        closeMenu();
+                    }
+                });
+
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && menu.classList.contains('active')) {
+                        closeMenu();
+                    }
                 });
             }
         }

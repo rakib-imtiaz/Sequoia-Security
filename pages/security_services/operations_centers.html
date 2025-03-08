@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="/">
+    <base href="/Sequoia-Security/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operations Centers | Sequoia Security</title>
@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="..\../assets/css/components.css">
     
     <script>
         tailwind.config = {
@@ -37,7 +37,7 @@
         <section class="relative min-h-[85vh] flex items-center mt-[88px]">
             <div class="absolute inset-0 bg-black">
                 <video class="w-full h-full object-cover opacity-50" autoplay loop muted playsinline>
-                    <source src="/assets/videos/ops-center.mp4" type="video/mp4">
+                    <source src="..\../assets/videos/ops-center.mp4" type="video/mp4">
                 </video>
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent"></div>
             </div>
@@ -173,7 +173,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Location 1 -->
                     <div class="relative overflow-hidden rounded-xl group">
-                        <img src="/assets/images/vancouver.jpg" alt="Vancouver Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="..\../assets/images/vancouver.jpg" alt="Vancouver Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-xl font-bold text-white">Vancouver</h3>
@@ -183,7 +183,7 @@
 
                     <!-- Location 2 -->
                     <div class="relative overflow-hidden rounded-xl group">
-                        <img src="/assets/images/victoria.jpg" alt="Victoria Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="..\../assets/images/victoria.jpg" alt="Victoria Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-xl font-bold text-white">Victoria</h3>
@@ -193,7 +193,7 @@
 
                     <!-- Location 3 -->
                     <div class="relative overflow-hidden rounded-xl group">
-                        <img src="/assets/images/toronto.jpg" alt="Toronto Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="..\../assets/images/toronto.jpg" alt="Toronto Operations" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6">
                             <h3 class="text-xl font-bold text-white">Toronto</h3>
@@ -223,8 +223,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('/header.html', 'header-container');
-            loadComponent('/footer.html', 'footer-container');
+            loadComponent('/Sequoia-Security/header.html', 'header-container');
+            loadComponent('/Sequoia-Security/footer.html', 'footer-container');
         });
     </script>
 </body>

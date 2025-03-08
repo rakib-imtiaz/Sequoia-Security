@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="/">
+    <base href="/Sequoia-Security/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office & Commercial Security Services | Sequoia Security</title>
@@ -16,11 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/colors.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/Sequoia-Security/assets/css/colors.css">
+    <link rel="stylesheet" href="/Sequoia-Security/assets/css/components.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" href="/Sequoia-Security/assets/images/logo.png">
     
     <!-- Tailwind Configuration -->
     <script>
@@ -49,7 +49,7 @@
         <section class="relative min-h-[85vh] flex items-center mt-[88px]">
             <div class="absolute inset-0">
                 <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/60 z-10"></div>
-                <img src="/assets/images/official_baner.png" alt="Office Security" class="w-full h-full object-cover">
+                <img src="/Sequoia-Security/assets/images/official_baner.png" alt="Office Security" class="w-full h-full object-cover">
             </div>
             <div class="container mx-auto px-4 relative z-20">
                 <div class="max-w-4xl">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="relative">
-                        <img src="/assets/images/security_guard.png" alt="Security Professional" class="rounded-xl shadow-2xl">
+                        <img src="/Sequoia-Security/assets/images/security_guard.png" alt="Security Professional" class="rounded-xl shadow-2xl">
                     </div>
                 </div>
             </div>
@@ -174,6 +174,11 @@
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const html = await response.text();
                 document.getElementById(containerId).innerHTML = html;
+                
+                // Initialize mobile menu after header loads
+                if (containerId === 'header-container') {
+                    initializeMobileMenu();
+                }
             } catch (error) {
                 console.error('Error loading component:', error);
                 document.getElementById(containerId).innerHTML = 
@@ -182,9 +187,66 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('/header.html', 'header-container');
-            loadComponent('/footer.html', 'footer-container');
+            loadComponent('/Sequoia-Security/header.html', 'header-container');
+            loadComponent('/Sequoia-Security/footer.html', 'footer-container');
         });
+    </script>
+
+    <script>
+        // Function to initialize mobile menu, matching the implementation in index.html
+        function initializeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const openButton = document.getElementById('mobile-menu-button');
+            const closeButton = document.getElementById('mobile-menu-close');
+
+            if (menu && openButton && closeButton) {
+                const toggleMenu = (show) => {
+                    menu.classList.toggle('active', show);
+                    openButton.classList.toggle('active', show);
+                    document.body.classList.toggle('overflow-hidden', show);
+                    
+                    // If closing, wait for animation to complete before hiding
+                    if (!show) {
+                        setTimeout(() => {
+                            if (!menu.classList.contains('active')) {
+                                menu.classList.add('invisible');
+                            }
+                        }, 300); // Match transition duration
+                    } else {
+                        menu.classList.remove('invisible');
+                    }
+                };
+
+                // Open menu
+                openButton.addEventListener('click', () => {
+                    console.log('Opening menu');
+                    toggleMenu(true);
+                });
+
+                // Close menu
+                const closeMenu = () => {
+                    console.log('Closing menu');
+                    toggleMenu(false);
+                };
+
+                // Close button click
+                closeButton.addEventListener('click', closeMenu);
+
+                // Click outside to close
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        closeMenu();
+                    }
+                });
+
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && menu.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
+        }
     </script>
 </body>
 </html>
