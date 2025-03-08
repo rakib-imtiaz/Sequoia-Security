@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/Sequoia-Security/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Sequoia Security</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Sequoia-Security/assets/css/components.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/Sequoia-Security/assets/images/logo.png">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sequoia': {
+                            'green': '#00E5B0',
+                            'dark-green': '#004D3D',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="header-container"></div>
+
+    <main class="pt-0">
+        <!-- Hero Section -->
+        <section class="relative min-h-[60vh] flex items-center justify-center mt-[88px] bg-gradient-to-r from-sequoia-dark-green to-black">
+            <div class="container mx-auto px-4 text-center">
+                <div class="inline-flex items-center justify-center w-24 h-24 bg-sequoia-green/20 rounded-full mb-8">
+                    <i class="fas fa-briefcase text-5xl text-sequoia-green"></i>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-8">
+                    Careers Page Under 
+                    <span class="text-sequoia-green">Development</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    We're working hard to bring our career opportunities to you soon. Thank you for your interest in joining the Sequoia Security team.
+                </p>
+                <a href="/Sequoia-Security/index.html" class="inline-flex items-center px-8 py-4 bg-sequoia-green text-white rounded-lg hover:bg-white hover:text-sequoia-dark-green transition-all duration-300">
+                    Return to Homepage
+                    <i class="fas fa-home ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Coming Soon Features -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-16">Career Opportunities Coming Soon</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Security Officers</h3>
+                        <p class="text-gray-600">
+                            Join our team of professional security personnel providing exceptional service across multiple industries.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-sitemap text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Management Positions</h3>
+                        <p class="text-gray-600">
+                            Leadership opportunities for experienced security professionals looking to advance their careers.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                        <div class="w-16 h-16 mx-auto bg-sequoia-green/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-laptop text-3xl text-sequoia-green"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Corporate Roles</h3>
+                        <p class="text-gray-600">
+                            Administrative, IT, and business development positions supporting our growing organization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8">Stay Updated on Job Opportunities</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Sign up for our careers newsletter to be the first to know when new positions become available.
+                </p>
+                <div class="max-w-md mx-auto">
+                    <form class="flex flex-col md:flex-row gap-4">
+                        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 border border-gray-300 rounded-lg focus:ring-sequoia-green focus:border-sequoia-green">
+                        <button type="submit" class="whitespace-nowrap bg-sequoia-green text-white px-6 py-3 rounded-lg hover:bg-sequoia-dark-green transition-colors">
+                            Notify Me
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Component Loading Script -->
+    <script>
+        async function loadComponent(url, containerId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                document.getElementById(containerId).innerHTML = html;
+                
+                // Initialize mobile menu after header loads
+                if (containerId === 'header-container') {
+                    initializeMobileMenu();
+                }
+            } catch (error) {
+                console.error('Error loading component:', error);
+                document.getElementById(containerId).innerHTML = 
+                    `<div class="text-red-500 p-4">Error loading component. Please refresh the page.</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/Sequoia-Security/header.html', 'header-container');
+            loadComponent('/Sequoia-Security/footer.html', 'footer-container');
+        });
+    </script>
+
+    <script>
+        // Function to initialize mobile menu
+        function initializeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const openButton = document.getElementById('mobile-menu-button');
+            const closeButton = document.getElementById('mobile-menu-close');
+
+            if (menu && openButton && closeButton) {
+                const toggleMenu = (show) => {
+                    menu.classList.toggle('active', show);
+                    openButton.classList.toggle('active', show);
+                    document.body.classList.toggle('overflow-hidden', show);
+                    
+                    // If closing, wait for animation to complete before hiding
+                    if (!show) {
+                        setTimeout(() => {
+                            if (!menu.classList.contains('active')) {
+                                menu.classList.add('invisible');
+                            }
+                        }, 300); // Match transition duration
+                    } else {
+                        menu.classList.remove('invisible');
+                    }
+                };
+
+                // Open menu
+                openButton.addEventListener('click', () => {
+                    console.log('Opening menu');
+                    toggleMenu(true);
+                });
+
+                // Close menu
+                const closeMenu = () => {
+                    console.log('Closing menu');
+                    toggleMenu(false);
+                };
+
+                // Close button click
+                closeButton.addEventListener('click', closeMenu);
+
+                // Click outside to close
+                menu.addEventListener('click', (e) => {
+                    if (e.target === menu) {
+                        closeMenu();
+                    }
+                });
+
+                // ESC key to close
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && menu.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
